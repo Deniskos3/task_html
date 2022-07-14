@@ -1,0 +1,520 @@
+html,
+body {
+  font-family: "Muller", sans-serif;
+  font-size: 10px;
+  background-color: white;
+  margin: 0;
+  color: #b4905d;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span {
+  margin: 0;
+}
+
+input {
+  border: 1px solid rgb(185, 145, 80);
+  background-color: rgb(255, 255, 255);
+  color: rgb(203, 168, 110);
+  outline: none;
+}
+input::-webkit-input-placeholder {
+  color: rgb(203, 168, 110);
+}
+input::-moz-placeholder {
+  color: rgb(203, 168, 110);
+}
+input:-ms-input-placeholder {
+  color: rgb(203, 168, 110);
+}
+input::-ms-input-placeholder {
+  color: rgb(203, 168, 110);
+}
+input::placeholder {
+  color: rgb(203, 168, 110);
+}
+
+/* COLORS */
+.orange {
+  color: #f7b04c;
+}
+
+.darkOrange {
+  color: #b4905df5;
+}
+
+/* БАЗОВЫЕ СТИЛИ */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flex-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.align-item-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.align-item-start {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.align-item-end {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.space-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.justify-end {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #f7b04c;
+
+  color: rgb(56, 36, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(255 155 24);
+}
+
+.border_red {
+  border-color: red;
+}
+/* header */
+header {
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0px 3px 13.8px 1.2px rgba(152, 152, 152, 0.2);
+  box-shadow: 0px 3px 13.8px 1.2px rgba(152, 152, 152, 0.2);
+  padding: 1.5rem 0;
+}
+
+header .logo {
+  -webkit-column-gap: 0.8rem;
+  -moz-column-gap: 0.8rem;
+  column-gap: 0.8rem;
+}
+
+header .logo img {
+  max-width: 6.9rem;
+  min-width: 3rem;
+  width: 100%;
+}
+
+header .logo p {
+  padding-top: 0.5rem;
+  letter-spacing: 1.5px;
+  font-size: 2.4rem;
+  line-height: 1.15;
+  font-family: "Muller", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #f9b555e8;
+}
+
+header nav {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+header a {
+  margin-right: 5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Главный блок */
+.mainblock {
+  margin-top: 12.5rem;
+}
+
+.mainblock > img {
+  width: 43%;
+  height: auto;
+}
+
+.mainblock > div {
+  width: 55%;
+}
+.mainblock h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.23;
+  margin-bottom: 4.5rem;
+}
+.mainblock .button {
+  height: 6rem;
+  max-width: 22rem;
+  width: 100%;
+}
+
+.mainblock .advantages {
+  width: 100%;
+  row-gap: 4.5rem;
+  margin-bottom: 5rem;
+}
+
+.mainblock .advantages .advantage_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 1.6rem;
+  -moz-column-gap: 1.6rem;
+  column-gap: 1.6rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: calc((100% - 3.5rem) / 2);
+}
+
+.mainblock .advantages .advantage_item img {
+  width: 6rem;
+  height: auto;
+}
+
+.mainblock .advantages .advantage_item h5 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.lg-object {
+  height: 75vh !important;
+  width: auto !important;
+  max-width: 90vw;
+  height: auto;
+}
+.mainblock .advantages .advantage_item p {
+  font-size: 1.6rem;
+
+  color: rgb(185, 145, 80);
+  line-height: 1;
+}
+
+/* Блок с товарами */
+.products {
+  margin-top: 15rem;
+}
+.products h3 {
+  text-align: center;
+  font-size: 3.5rem;
+  line-height: 1.571;
+  margin-bottom: 5rem;
+}
+
+.products > div {
+  row-gap: 2.4rem;
+  -webkit-column-gap: 2.4rem;
+  -moz-column-gap: 2.4rem;
+  column-gap: 2.4rem;
+}
+
+.products .product_card {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0px 3px 13.8px 1.2px rgba(152, 152, 152, 0.2);
+  box-shadow: 0px 3px 13.8px 1.2px rgba(152, 152, 152, 0.2);
+  padding: 2.5rem 2rem 1.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  cursor: pointer;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: calc((100% - 7.2rem) / 4);
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+.products .product_card:hover {
+  margin-top: -10px;
+}
+
+.products .product_card .imb_block {
+  height: 14rem;
+  margin-bottom: 2.7rem;
+}
+.products .product_card img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  max-width: 96%;
+}
+
+.products .product_card .title {
+  font-size: 1.8rem;
+  color: rgb(56, 36, 0);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.products .product_card p {
+  font-size: 1.4rem;
+  font-family: "Muller";
+  color: rgb(24, 26, 26);
+  line-height: 1.286;
+  font-weight: 500;
+  text-align: center;
+  height: 6.5rem;
+  overflow: hidden;
+  width: 100%;
+}
+.products .product_card .btn {
+  width: 100%;
+  height: 5rem;
+  margin-top: rem;
+}
+
+/* Стили формы */
+.form_block {
+  margin-top: 17.6rem;
+  margin-bottom: 10rem;
+}
+
+.form_block .info {
+  width: 32%;
+}
+.form_block .info h3 {
+  font-size: 3.5rem;
+  margin-bottom: 6rem;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.form_block .info p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+
+  color: rgb(185, 145, 80);
+}
+
+.form_block form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 2.5rem;
+  width: 27.5%;
+}
+
+.form_block form input {
+  font-size: 1.6rem;
+  padding-left: 2.4rem;
+  height: 6rem;
+}
+.form_block form .btn {
+  height: 6rem;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.form_block .img_block {
+  width: 22%;
+}
+
+.form_block .img_block img {
+  height: 100%;
+  margin-bottom: -15%;
+  max-width: 30vw;
+}
+
+/* Стили для модалки */
+.modal_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2828289e;
+  display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.modal_container > div {
+  position: relative;
+  background-color: white;
+  padding: 5.5rem 12rem 4rem;
+  border-radius: 10px;
+}
+
+.modal_container.error p {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: red;
+  max-width: 60rem;
+}
+
+.modal_container.success p {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: green;
+  max-width: 60rem;
+}
+
+.modal_container svg {
+  position: absolute;
+  right: 2rem;
+  top: 1.5rem;
+  width: 2.2rem;
+  height: auto;
+  cursor: pointer;
+}
+.modal_container svg line {
+  stroke: #000;
+  stroke-width: 10;
+}
+
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    font-size: 4px !important;
+  }
+  header .logo {
+    display: none;
+  }
+  header nav {
+    padding: 2rem 0;
+    -webkit-column-gap: 3rem;
+    -moz-column-gap: 3rem;
+    column-gap: 3rem;
+  }
+  header a {
+    font-size: 3.5rem;
+    margin: 0;
+  }
+  .mainblock {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .mainblock > img {
+    display: none;
+  }
+  .mainblock .info {
+    width: 96%;
+  }
+  .mainblock .info h1 {
+    font-size: 6rem;
+  }
+  .advantage_item {
+    width: 100% !important;
+  }
+  .advantage_item img {
+    width: 10rem !important;
+  }
+  .advantage_item h5 {
+    font-size: 3.3rem !important;
+  }
+  .advantage_item p {
+    font-size: 3rem !important;
+  }
+  .mainblock .btn {
+    height: 10rem;
+    max-width: 50%;
+    margin: 0 auto;
+    font-size: 3rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1040px) {
+  html,
+  body {
+    font-size: 6px !important;
+  }
+}
+
+@media (min-width: 1040px) and (max-width: 1260px) {
+  html,
+  body {
+    font-size: 8px !important;
+  }
+}
