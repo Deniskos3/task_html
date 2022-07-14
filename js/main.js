@@ -52,7 +52,7 @@ document.getElementById("send").addEventListener("click", async function (e) {
 
   if (Validate(name, 1))
     return ErrorModal("Имя должно быть больше одной буквы");
-  if (Validate(street, 5)) return ErrorModal("Введите корректный адресс");
+  if (Validate(street, 5)) return ErrorModal("Введите корректный адрес");
   if (Validate(phone, 15)) return ErrorModal("Введите корректный номер");
 
   try {
@@ -68,7 +68,7 @@ document.getElementById("send").addEventListener("click", async function (e) {
       }),
     });
     const json = await response.json();
-    SuccessModal("Данный были успешно отправлены");
+    SuccessModal("Данные были успешно отправлены");
   } catch (error) {
     ErrorModal(`Ошибка ${error}`);
   }
